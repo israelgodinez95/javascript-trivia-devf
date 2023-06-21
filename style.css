@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    outline: 1px solid limegreen;  
+}
+
+body{
+    background-color: #4f4f64;
+}
+
+.container-fluid {
+    background-color:rgb(46, 46, 46);
+}
+
+.navbar-brand{
+    color: white;
+    font-weight: bolder;
+}
+
+.mt-5{
+    color: white
+}
