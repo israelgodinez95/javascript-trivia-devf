@@ -9,7 +9,7 @@ const hardDifficulty = document.getElementById("hard-difficulty");
 const startButton = document.getElementById("btn-start");
 const pageOne = document.getElementById("page-1");
 const pageTwo = document.getElementById("page-2");
-const options=document.querySelectorAll('.form-check-label');
+const options = document.querySelectorAll('.form-check-label');
 
 
 async function logCategories() {
@@ -82,36 +82,47 @@ async function run() {
     x.results.forEach((item, index) => {
         document.querySelectorAll('.card-title')[index].textContent = x.results[index].question;
         (x.results[index].incorrect_answers).push(x.results[index].correct_answer);
-        const allAnswers= shuffleArray(x.results[index].incorrect_answers);
+        const allAnswers = shuffleArray(x.results[index].incorrect_answers);
 
-        for(let answersi=0; answersi<allAnswers.length; answersi++){
-            options[(4*index)+answersi].textContent=allAnswers[answersi];
-      
-        }
+        if (x.results[index].type == "multiple") {
+
+            for (let answersi = 0; answersi < allAnswers.length; answersi++) {
+
+                options[(4 * index) + answersi].textContent = allAnswers[answersi];
+            } }
+        else if (x.results[index].type == "boolean") {
+                    options[4*index].textContent = 'True';
+                    options[4*index+1].textContent = 'False';
+                    options[4*index+2].parentElement.remove();
+                    options[4*index+3].parentElement.remove();
+                }
         
+
+        //x.results[index].question.replace('&quot/g;', '')
+        console.log(x.results[index].type);
         console.log(x.results[index].question);
         console.log(x.results[index].correct_answer);
         console.log(x.results[index].incorrect_answers);
         console.log(allAnswers);
     });
-    
+
     render();
 }
 
 function shuffleArray(array) {
     // Función de comparación aleatoria
     function compareRandom(a, b) {
-      return Math.random() - 0.5;
+        return Math.random() - 0.5;
     }
-  
+
     // Copia del arreglo original
     const shuffledArray = array.slice();
-  
+
     // Revolver los índices utilizando sort() y la función de comparación aleatoria
     shuffledArray.sort(compareRandom);
-  
+
     return shuffledArray;
-  }
+}
 
 logCategories();
 
