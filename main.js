@@ -14,6 +14,9 @@ const categoriesDropdownItem = document.querySelectorAll('.dropdown-menu')[1];
 const typeOptions = document.querySelectorAll('.type');
 const startButton = document.getElementById("btn-start");
 const sections = document.getElementsByTagName("section");
+const score = document.getElementById("score");
+let scoreNum = 0;
+
 
 function shuffleArray(array) {
     // Función de comparación aleatoria
@@ -101,12 +104,28 @@ startButton.addEventListener("click", function (event) {
                 
                 data.results[index].incorrect_answers.forEach((item,index2) =>{
                     const option = document.createElement("button");
-                    option.className = 'btn-option';
+                    option.className = index + ' btn-option';
                     option.textContent = data.results[index].incorrect_answers[index2];
                     question.appendChild(option);      
-                    option.addEventListener("click",function(event){
-                        console.log(option.textContent);
-                    })              
+                    option.addEventListener("click",function select(event){
+                        if(option.textContent == data.results[index].correct_answer){
+                            console.log('correcto');
+                            option.className += ' correct-answer';
+                            console.log(option);
+                            option.removeEventListener('click',select);
+                            scoreNum +=100;
+                            score.textContent = scoreNum;
+                        } else {
+                            console.log('incorrecto');
+                            data.results[index].correct_answer.className += ' correct-answer';
+                            option.className += ' incorrect-answer';
+                            console.log(option);
+                            option.removeEventListener('click',select);
+                        }
+                    })    
+                    
+                
+
                 })
                 sections[1].appendChild(question);
                 

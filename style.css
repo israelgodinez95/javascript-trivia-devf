@@ -154,3 +154,11 @@ a{
     align-items: center;
     justify-content: center;
 }
+
+.correct-answer{
+    background-image: linear-gradient(rgb(0, 143, 143),rgb(157, 198, 70));
+}
+
+.incorrect-answer{
+    background-image: linear-gradient(rgb(143, 55, 0),rgb(241, 165, 1));
+}
