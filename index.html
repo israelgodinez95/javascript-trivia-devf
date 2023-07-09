@@ -12,7 +12,91 @@
 </head>
 
 <body>
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://opentdb.com/images/logo-banner.png" alt="opentdb" width="109" height="50">
+      </a>
+    </div>
+  </nav>
+
+  <section id="section-main">
+
+    <div class="col col-main">
+
+      <div class="row">
+        <a class="navbar-brand" href="#">
+          <img src="https://opentdb.com/images/logo.png" alt="Logo" width="436" height="200"
+            class="d-inline-block align-text-top">
+        </a>
+      </div>
+
+      <div class="row">
+        <p id="triviapp">TRIVI-APP</p>
+      </div>
+
+      <div class="row">
+        <div class="dropdown mt-3">
+          <button id="btn-difficulty" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Any Difficulty
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdown3">
+            <a id="easy-difficulty" class="difficulty dropdown-item" href="#">Easy</a>
+            <a id="medium-difficulty" class="difficulty dropdown-item" href="#">Medium</a>
+            <a id="hard-difficulty" class="difficulty dropdown-item" href="#">Hard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="dropdown mt-3">
+          <button id="btn-category" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Any Category
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdown3">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="dropdown mt-3">
+          <button id="btn-type" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Any Type
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdown3">
+            <a id="multiple-type" class=" type dropdown-item" href="#">Multiple</a>
+            <a id="truefalse-type" class="type dropdown-item" href="#">Boolean</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="dropdown mt-3">
+          <button id="btn-start" class="btn btn-success">GET TRIVIA</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section id="section-questions" style="display: none;">
+    <div id='score-div' class="container">
+      <p>SCORE:</p>
+      <p id="score">0</p>
+    </div>
+  </section>
+
+
+  <footer>
+
+  </footer>
+
+  <!-- <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://opentdb.com/images/logo.png" alt="Logo" width="30" height="24"
@@ -22,7 +106,7 @@
     </div>
   </nav>
 
-  <div id="page-1" class="container text-center">
+  <div id="settings-page" class="container text-center">
     <h1 class="mt-5">10 Questions Trivia!</h1>
 
     <div class="dropdown mt-3">
@@ -101,345 +185,7 @@
         </div>
       </div>
     </div>
-
-    
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 2</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta2" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta2" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta2" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta2" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 3</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta3" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta3" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta3" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta3" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 4</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta4" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta4" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta4" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta4" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 5</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta5" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta5" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta5" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta5" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 6</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta6" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta6" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta6" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta6" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 7</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta7" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta7" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta7" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta7" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 8</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta8" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta8" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta8" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta8" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 9</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta9" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta9" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta9" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta9" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pregunta 10</h5>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta10" id="opcion1" value="opcion1">
-                <label class="form-check-label" for="opcion1">
-                  Opción 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta10" id="opcion2" value="opcion2">
-                <label class="form-check-label" for="opcion2">
-                  Opción 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta10" id="opcion3" value="opcion3">
-                <label class="form-check-label" for="opcion3">
-                  Opción 3
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pregunta10" id="opcion4" value="opcion4">
-                <label class="form-check-label" for="opcion4">
-                  Opción 4
-                </label>
-              </div>
-              <button type="button" class="btn btn-primary">Enviar respuesta</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
-   
-
-  </div>
+  </div> -->
 
   <script src="./main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
